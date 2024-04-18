@@ -62,5 +62,6 @@ repos:
           - pytest
           - types-PyYAML
           - types-tabulate
+          - types-Markdown
         args: ["tools/schemacode/bidsschematools"]
         pass_filenames: false
