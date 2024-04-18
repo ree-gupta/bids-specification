@@ -13,6 +13,24 @@ def fence(
     md: markdown.Markdown,
     **kwargs,
 ) -> str:
-    df = pd.read_csv(io.StringIO(source), sep="\t")
-    md_table = tabulate(df, headers="keys", tablefmt="github", showindex=False)  # type: ignore
-    return md.convert(md_table)
+    print(f"{source=}")
+    print(f"{language=}")
+    print(f"{css_class=}")
+    print(f"{options=}")
+    print(f"{md=}")
+    print(f"{kwargs=}")
+    try:
+        df = pd.read_csv(io.StringIO(source), sep="\t")
+        print(df)
+        md_table = tabulate(df, headers="keys", tablefmt="github", showindex=False)  # type: ignore
+        print(md_table)
+        ret = md.convert(md_table)
+        print(ret)
+        # Remove newlines to prevent copy-paste from inserting spaces
+        return ret.replace("\n", "")
+    except Exception:
+        import traceback
+
+        exc = traceback.format_exc()
+        print(exc)
+        return f"<pre>{exc}</pre>"
