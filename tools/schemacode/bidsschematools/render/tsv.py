@@ -1,8 +1,13 @@
-import io
+from __future__ import annotations
 
-import markdown
+import io
+import typing as ty
+
 import pandas as pd
 from tabulate import tabulate
+
+if ty.TYPE_CHECKING:
+    import markdown
 
 
 def fence(
