@@ -63,7 +63,7 @@ birthdate:
   name: birthdate
   display_name: Birthdate
   description: |
-    Day of birth of the participant. Datetime format and their anonymization are described 
+    Day of birth of the participant. Datetime format and their anonymization are described
     in [Units](SPEC_ROOT/common-principles.md#units).
   type: string
   format: datetime
