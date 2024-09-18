@@ -46,7 +46,7 @@ age_category:
   name: age_category
   display_name: Age category
   description: |
-    For non-numeric description of the age (e.g. developmental stage) a string can be provided.
+    For non-numeric description of the age (e.g. `prime adult stage`) a string can be provided.
     We RECOMMEND to use the [UBERON life cycle stage](http://purl.obolibrary.org/obo/UBERON_0000105) to specify it.
   type: string
 age_type:
