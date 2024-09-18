@@ -1410,7 +1410,7 @@ postnatal:
   display_name: postnatal
   description: |
     This is the actual time that has passed since a subject's birth,
-    also known as “chronological age”.
+    also known as "chronological age".
     If age_type is omitted, age is assumed to be this type.
 fetal:
   value: fetal
