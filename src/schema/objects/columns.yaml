@@ -46,23 +46,38 @@ life_cycle_stage:
   name: life cycle stage
   display_name: life cycle stage
   description: |
-    A non-numeric life cycle stage (e.g., 'adult stage'), inspired by the [UBERON life cycle stage](http://purl.obolibrary.org/obo/UBERON_0000105).
+    A non-numeric life cycle stage (e.g., 'adult stage'), inspired by the
+    [UBERON life cycle stage](http://purl.obolibrary.org/obo/UBERON_0000105).
   type: string
+  enum:
+    - $ref: objects.enums.adolescent.value
+    - $ref: objects.enums.adult.value
+    - $ref: objects.enums.embryo.value
+    - $ref: objects.enums.infant.value
+    - $ref: objects.enums.juvenile.value
+    - $ref: objects.enums.late_adult.value
+    - $ref: objects.enums.neonate.value
+    - $ref: objects.enums.perinatal.value
+    - $ref: objects.enums.prime_adult.value
+    - $ref: objects.enums.young_adult.value
 age_reference:
   name: age reference
   display_name: age reference
   description: |
-    Non-numeric life cycle point of an organism that serves as reference for the numeric age information.
+    Non-numeric life cycle point of an organism that serves as reference for
+    the numeric age information.
   type: string
   enum:
-    - $ref: objects.enums.postnatal.value
-    - $ref: objects.enums.fetal.value
-    - $ref: objects.enums.gestational.value
+    - $ref: objects.enums.start_of_embryo_stage.value
+    - $ref: objects.enums.start_of_gestational_stage.value
+    - $ref: objects.enums.start_of_neonate_stage.value
+    - $ref: objects.enums.end_of_adult_stage.value
 birthdate:
   name: birthdate
   display_name: birthdate
   description: |
-    Date of birth (start point of the neonate stage) of the subject. Datetime format. Should not be provided or anonymized for human subjects.
+    Date of birth (start point of the neonate stage) of the subject. Datetime format.
+    Should not be provided or anonymized for human subjects.
   type: string
   format: datetime
 cardiac:
