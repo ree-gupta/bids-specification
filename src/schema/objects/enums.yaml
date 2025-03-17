@@ -1405,24 +1405,88 @@ microvascular:
   display_name: microvascular
   description: |
     The origin of a tissue: microvascular
-postnatal:
-  value: postnatal
-  display_name: postnatal
+start_of_embryo_stage:
+  value: start of embryo stage
+  display_name: start of embryo stage
   description: |
-    This is the actual time that has passed since a subject's birth,
-    also known as "chronological age".
-    If age_type is omitted, age is assumed to be this type.
-fetal:
-  value: fetal
-  display_name: fetal
+    The beginning of the embryo stage, which is also commonly referred as the "conception".
+start_of_gestational_stage:
+  value: start of gestational stage
+  display_name: start of gestational stage
   description: |
-    Also known as "embryonic age," this measures the age of a
-    fetus or embryo from the time of conception. It's typically about two weeks
-    less than the gestational age.
-gestational:
-  value: gestational
-  display_name: gestational
+    The beginning of the gestational stage, which is also commonly referred as the
+    "first day of the mother's last menstrual period".
+start_of_neonate_stage:
+  value: start of neonatal stage
+  display_name: start of neonatal stage
   description: |
-    This measures the duration of pregnancy from the first day of the
-    mother's last menstrual period to the current date. This should be included
-    for experiments where some subjects have not been born.
+    The beginning of the neonatal stage, which is also commonky referred as the "birth".
+end_of_adult_stage:
+  value: end of adult stage
+  display_name: end of adult stage
+  description: |
+    The end of the adult stage, which is also commonly referred as the "death".
+adolescent:
+  value: adolescent
+  display_name: adolescent
+  description: |
+    The transitional life cycle stage of growth and development between childhood and adulthood,
+    often described as ‘puberty’.
+adult:
+  value: adult
+  display_name: adult
+  description: |
+    The life cycle stage of an animal or human that reached sexual maturity.
+    The UBERON term for this stage is 'post-juvenile adult stage' - http://purl.obolibrary.org/obo/UBERON_0000113.
+embryo:
+  value: embryo
+  display_name: embryo
+  description: |
+    The life cycle stage of an animal or human that starts with fertilitzation
+    and ends with the fully formed embryo. The UBERON term for this stage is
+    'embryo stage' - http://purl.obolibrary.org/obo/UBERON_0000068.
+infant:
+  value: infant
+  display_name: infant
+  description: |
+    The life cycle stage of mammals (animal or human) that follows the neonate stage and ends at weaning.
+    The UBERON term for this stage is 'infant stage' - http://purl.obolibrary.org/obo/UBERON_0034920.
+juveline:
+  value: juveline
+  display_name: juveline
+  description: |
+    The life cycle stage of an animal or human that starts with the independence of the nest and/or
+    caregivers and ends with sexual maturity. The UBERON term for this stage is
+    'juvenile stage' - http://purl.obolibrary.org/obo/UBERON_0034919.
+late_adult:
+  value: late adult
+  display_name: late adult
+  description: |
+    The life cycle stage of an animal or human that follows the prime adult stage.
+    The UBERON term for this stage is 'late adult stage' - http://purl.obolibrary.org/obo/UBERON_0007222.
+neonate:
+  value: neonate
+  display_name: neonate
+  description:
+    The life cycle stage of an animal or human that immediately follows birth.
+    The UBERON term for this stage is 'neonate stage' - http://purl.obolibrary.org/obo/UBERON_0007221.
+perinatal:
+  value: perinatal
+  display_name: perinatal
+  description: |
+    The life cycle stage of an animal or human that starts right before birth
+    and ends right after birth. The UBERON term for this stage
+    is 'perinatal stage' - http://purl.obolibrary.org/obo/UBERON_0012101.
+prime_adult:
+  value: prime adult
+  display_name: prime adult
+  description: |
+    The life cycle stage of an animal or human that starts at the onset of sexual maturity or
+    the cessation of growth, whichever comes last, and ends before senescence.
+    The UBERON term for this stage is 'prime adult stage' - http://purl.obolibrary.org/obo/UBERON_0018241.
+young_adult:
+  value: young adult
+  display_name: young adult
+  description: |
+    the early adult stage of an animal or human when sexual maturity has been reached,
+    but not the cessation of growth.
