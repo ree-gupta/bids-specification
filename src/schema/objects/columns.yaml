@@ -42,18 +42,17 @@ age:
     for privacy purposes.
   type: number
   unit: year
-age_category:
-  name: age_category
-  display_name: Age category
+life_cycle_stage:
+  name: life cycle stage
+  display_name: life cycle stage
   description: |
-    For non-numeric description of the age (e.g. `prime adult stage`) a string can be provided.
-    We RECOMMEND to use the [UBERON life cycle stage](http://purl.obolibrary.org/obo/UBERON_0000105) to specify it.
+    A non-numeric life cycle stage (e.g., 'adult stage'), inspired by the [UBERON life cycle stage](http://purl.obolibrary.org/obo/UBERON_0000105).
   type: string
-age_type:
-  name: age_type
-  display_name: Age type
+age_reference:
+  name: age reference
+  display_name: age reference
   description: |
-    Type of age measurement (e.g. `postnatal`, `fetal`, `gestational`). If not specified, `postnatal` is assumed.
+    Non-numeric life cycle point of an organism that serves as reference for the numeric age information.
   type: string
   enum:
     - $ref: objects.enums.postnatal.value
@@ -61,10 +60,9 @@ age_type:
     - $ref: objects.enums.gestational.value
 birthdate:
   name: birthdate
-  display_name: Birthdate
+  display_name: birthdate
   description: |
-    Day of birth of the participant. Datetime format and their anonymization are described
-    in [Units](SPEC_ROOT/common-principles.md#units).
+    Date of birth (start point of the neonate stage) of the subject. Datetime format. Should not be provided or anonymized for human subjects.
   type: string
   format: datetime
 cardiac:
