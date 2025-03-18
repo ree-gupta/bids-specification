@@ -46,7 +46,8 @@ life_cycle_stage:
   name: life cycle stage
   display_name: life cycle stage
   description: |
-    A non-numeric life cycle stage (e.g., 'adult stage'), inspired by the
+    A non-numeric term for a subject's life cycle stage (e.g., 'adult stage'). 
+    Inspired by the
     [UBERON life cycle stage](http://purl.obolibrary.org/obo/UBERON_0000105).
   type: string
   enum:
@@ -64,8 +65,8 @@ age_reference:
   name: age reference
   display_name: age reference
   description: |
-    Non-numeric life cycle point of an organism that serves as reference for
-    the numeric age information.
+    Non-numeric term of for a time point in a subject's life cycle that serves 
+    as reference for the numeric age information (e.g., 'start of embryo stage').
   type: string
   enum:
     - $ref: objects.enums.start_of_embryo_stage.value
@@ -76,7 +77,7 @@ birthdate:
   name: birthdate
   display_name: birthdate
   description: |
-    Date of birth (start point of the neonate stage) of the subject. Datetime format.
+    Date of the start of a subject's neonate stage. Datetime format.
     Should not be provided or anonymized for human subjects.
   type: string
   format: datetime
