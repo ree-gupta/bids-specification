@@ -53,12 +53,13 @@ life_cycle_stage:
   enum:
     - $ref: objects.enums.adolescent.value
     - $ref: objects.enums.adult.value
+    - $ref: objects.enums.death.value
     - $ref: objects.enums.embryo.value
     - $ref: objects.enums.infant.value
     - $ref: objects.enums.juvenile.value
     - $ref: objects.enums.late_adult.value
     - $ref: objects.enums.neonate.value
-    - $ref: objects.enums.perinatal.value
+    - $ref: objects.enums.perinate.value
     - $ref: objects.enums.prime_adult.value
     - $ref: objects.enums.young_adult.value
 age_reference:
@@ -72,7 +73,7 @@ age_reference:
     - $ref: objects.enums.start_of_embryo_stage.value
     - $ref: objects.enums.start_of_gestational_stage.value
     - $ref: objects.enums.start_of_neonate_stage.value
-    - $ref: objects.enums.end_of_adult_stage.value
+    - $ref: objects.enums.start_of_death_stage.value
 birthdate:
   name: birthdate
   display_name: birthdate

@@ -1478,9 +1478,9 @@ neonate:
   description:
     Life cycle stage of a subject that immediately follows birth.
     Adapted from UBERON - http://purl.obolibrary.org/obo/UBERON_0007221.
-perinatal:
-  value: perinatal
-  display_name: perinatal
+perinate:
+  value: perinate
+  display_name: perinate
   description: |
     Life cycle stage of a subject that starts right before and ends right after birth. 
     Adapted from UBERON - http://purl.obolibrary.org/obo/UBERON_0012101.
