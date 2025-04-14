@@ -17,7 +17,6 @@ Participants:
     strain_rrid: recommended
     birthdate: optional
     life_cycle_stage: recommended
-    age_reference: recommended
   index_columns: [participant_id]
   additional_columns: allowed
 
