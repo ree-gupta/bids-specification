@@ -1455,11 +1455,6 @@ start_of_neonate_stage:
   description: |
     Point of birth marking the beginning of a subject's neonatal stage. Often assumed
     as default age reference if not otherwise specified.
-start_of_death_stage:
-  value: start of death stage
-  display_name: start of death stage
-  description: |
-    Point of death marking the beginning of a subject's death stage.
 adolescent:
   value: adolescent
   display_name: adolescent
@@ -1490,9 +1485,9 @@ infant:
   description: |
     Life cycle stage of subjects (mammals) that follows the neonate stage and ends at
     weaning. Adapted from UBERON - http://purl.obolibrary.org/obo/UBERON_0034920.
-juveline:
-  value: juveline
-  display_name: juveline
+juvenile:
+  value: juvenile
+  display_name: juvenile
   description: |
     Life cycle stage of a subject that starts with the independence of the nest
     and/or caregivers and ends with sexual maturity. Adapted from

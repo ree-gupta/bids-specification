@@ -60,7 +60,6 @@ AgeReference:
     - $ref: objects.enums.start_of_embryo_stage.value
     - $ref: objects.enums.start_of_gestational_stage.value
     - $ref: objects.enums.start_of_neonate_stage.value
-    - $ref: objects.enums.start_of_death_stage.value
 Anaesthesia:
   name: Anaesthesia
   display_name: Anaesthesia
