@@ -54,7 +54,7 @@ AgeReference:
   display_name: Age Reference
   description: |
     Non-numeric term of for a time point in a subject's life cycle that serves
-    as reference for the numeric age information (e.g., 'start of embryo stage').
+    as reference for the numeric age information (for instance, 'start of embryo stage').
   type: string
   enum:
     - $ref: objects.enums.start_of_embryo_stage.value

@@ -50,7 +50,7 @@ age_reference:
   display_name: age reference
   description: |
     Non-numeric term of for a time point in a subject's life cycle that serves
-    as reference for the numeric age information (e.g., 'start of embryo stage').
+    as reference for the numeric age information (for instance, 'start of embryo stage').
   type: string
   enum:
     - $ref: objects.enums.start_of_embryo_stage.value
@@ -275,7 +275,7 @@ life_cycle_stage:
   name: life cycle stage
   display_name: life cycle stage
   description: |
-    A non-numeric term for a subject's life cycle stage (e.g., 'adult stage').
+    A non-numeric term for a subject's life cycle stage (for instance, 'adult stage').
     Inspired by the
     [UBERON life cycle stage](http://purl.obolibrary.org/obo/UBERON_0000105).
   type: string
