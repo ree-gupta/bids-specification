@@ -20,7 +20,8 @@ _MEGCoordSys:
   type: string
   enum:
     - $ref: objects.enums.CTF.value
-    - $ref: objects.enums.ElektaNeuromag.value
+    - $ref: objects.enums.ElektaNeuromag.value # deprecated
+    - $ref: objects.enums.NeuromagElektaMEGIN.value
     - $ref: objects.enums.4DBti.value
     - $ref: objects.enums.KitYokogawa.value
     - $ref: objects.enums.ChietiItab.value
@@ -119,6 +120,11 @@ Absent:
   display_name: Absent
   description: |
     No specific M0 information is present.
+OneD:
+  value: 1D
+  display_name: One-dimensional
+  description: |
+    One-dimensional MR acquisition.
 TwoD:
   value: 2D
   display_name: Two-dimensional
@@ -305,6 +311,13 @@ CTF:
 ElektaNeuromag:
   value: ElektaNeuromag
   display_name: Elekta Neuromag
+  description: |
+    RAS orientation and the origin between the ears.
+    [DEPRECATED](SPEC_ROOT/common-principles.md#definitions).
+    Dataset curators SHOULD use `NeuromagElektaMEGIN` instead.
+NeuromagElektaMEGIN:
+  value: NeuromagElektaMEGIN
+  display_name: Neuromag Elekta MEGIN
   description: |
     RAS orientation and the origin between the ears.
 4DBti:
@@ -1222,27 +1235,45 @@ control:
   value: control
   display_name: control
   description: |
-    An ASL volume type: control
+    An ASL volume type: control.
+    The control image is acquired in the exact same way as the label image,
+    except that the magnetization of the blood flowing into the imaging region has not been inverted.
 label:
   value: label
   display_name: label
   description: |
-    An ASL volume type: label
+    An ASL volume type: label.
+    The label image is acquired in the exact same way as the control image,
+    except that the blood magnetization flowing into the imaging region has been inverted.
 m0scan:
   value: m0scan
   display_name: m0scan
   description: |
-    An ASL volume type: m0scan
+    An ASL volume type: m0scan.
+    The M0 image is a calibration image, used to estimate the equilibrium magnetization of blood.
+    These volumes may optionally be separated into a separate file with the ``m0scan`` suffix.
 deltam:
   value: deltam
   display_name: deltam
   description: |
-    An ASL volume type: deltam
+    An ASL volume type: deltam.
+    The deltaM image is a perfusion-weighted image, obtained by the subtraction of `control` - `label`.
 cbf:
   value: cbf
   display_name: cbf
   description: |
-    An ASL volume type: cbf
+    An ASL volume type: cbf.
+    The cerebral blood flow (CBF) image is produced by dividing the deltaM by the M0,
+    quantified into `mL/100g/min` (See also [doi:10.1002/mrm.25197](https://doi.org/10.1002/mrm.25197)).
+noRF:
+  value: noRF
+  display_name: noRF
+  description: |
+    An ASL volume type: noRF.
+    The no radio frequency excitation (noRF) image is a noise scan acquired by disabling the
+    radio frequency excitation,
+    while maintaining all other parameters from the associated scan.
+    These volumes may optionally be separated into a separate file with the ``noRF`` suffix.
 single_coil:
   value: single-coil
   display_name: single-coil
@@ -1409,14 +1440,14 @@ start_of_embryo_stage:
   value: start of embryo stage
   display_name: start of embryo stage
   description: |
-    Point of fertilization marking the beginning of the subject's embryo 
+    Point of fertilization marking the beginning of the subject's embryo
     stage.
 start_of_gestational_stage:
   value: start of gestational stage
   display_name: start of gestational stage
   description: |
-    Point of gestation defined as the first day of the mother's last menstrual period. 
-    Marks the beginning of the subject's gestational stage. Used as reference when 
+    Point of gestation defined as the first day of the mother's last menstrual period.
+    Marks the beginning of the subject's gestational stage. Used as reference when
     time point of fertilization is unknown.
 start_of_neonate_stage:
   value: start of neonatal stage
@@ -1433,44 +1464,44 @@ adolescent:
   value: adolescent
   display_name: adolescent
   description: |
-    Life cycle stage of a subject loosely defined by the transitional growth 
+    Life cycle stage of a subject loosely defined by the transitional growth
     and development between childhood and adulthood, often described as ‘puberty’.
 adult:
   value: adult
   display_name: adult
   description: |
-    Life cycle stage of a subject that starts with sexual maturity and ends with 
+    Life cycle stage of a subject that starts with sexual maturity and ends with
     death. Adapted from UBERON - http://purl.obolibrary.org/obo/UBERON_0000113.
 embryo:
   value: embryo
   display_name: embryo
   description: |
-    Life cycle stage of a subject that starts with fertilization and ends with the 
+    Life cycle stage of a subject that starts with fertilization and ends with the
     fully formed embryo. Adapted from UBERON - http://purl.obolibrary.org/obo/UBERON_0000068.
 death:
   value: death
   display_name: death
   description: |
-    Life cycle stage of a subject that starts with death and ends with full 
+    Life cycle stage of a subject that starts with death and ends with full
     decomposition of the subject's body. Adapted from UBERON - http://purl.obolibrary.org/obo/UBERON_0000071.
 infant:
   value: infant
   display_name: infant
   description: |
-    Life cycle stage of subjects (mammals) that follows the neonate stage and ends at 
+    Life cycle stage of subjects (mammals) that follows the neonate stage and ends at
     weaning. Adapted from UBERON - http://purl.obolibrary.org/obo/UBERON_0034920.
 juveline:
   value: juveline
   display_name: juveline
   description: |
-    Life cycle stage of a subject that starts with the independence of the nest 
-    and/or caregivers and ends with sexual maturity. Adapted from 
+    Life cycle stage of a subject that starts with the independence of the nest
+    and/or caregivers and ends with sexual maturity. Adapted from
     UBERON - http://purl.obolibrary.org/obo/UBERON_0034919.
 late_adult:
   value: late adult
   display_name: late adult
   description: |
-    Life cycle stage of a subject that follows the prime adult stage and ends with 
+    Life cycle stage of a subject that follows the prime adult stage and ends with
     death. Adapted from UBERON - http://purl.obolibrary.org/obo/UBERON_0007222.
 neonate:
   value: neonate
@@ -1482,7 +1513,7 @@ perinate:
   value: perinate
   display_name: perinate
   description: |
-    Life cycle stage of a subject that starts right before and ends right after birth. 
+    Life cycle stage of a subject that starts right before and ends right after birth.
     Adapted from UBERON - http://purl.obolibrary.org/obo/UBERON_0012101.
 prime_adult:
   value: prime adult
@@ -1495,5 +1526,5 @@ young_adult:
   value: young adult
   display_name: young adult
   description: |
-    Life cycle stage of a subject that starts with sexual maturity and ends with the 
+    Life cycle stage of a subject that starts with sexual maturity and ends with the
     cessation of growth (if this is reached after sexual maturity).

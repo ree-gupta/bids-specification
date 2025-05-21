@@ -108,7 +108,7 @@ The following extension table is reproduced in part from Section 9.0 of the
 or combinations of data arrays.
 
 | Intent      | Extension     |
-|-------------|---------------|
+| ----------- | ------------- |
 | Coordinates | `.coord.gii`  |
 | Functional  | `.func.gii`   |
 | Labels      | `.label.gii`  |
@@ -129,7 +129,7 @@ for GIFTI files.
 
 [storage]: ../common-principles.md#storage-of-derived-datasets
 
-[derived-dataset-description]: ../modality-agnostic-files.md#derived-dataset-and-pipeline-description
+[derived-dataset-description]: ../modality-agnostic-files/dataset-description.md#derived-dataset-and-pipeline-description
 
 [gifti]: https://www.nitrc.org/projects/gifti/
 
