@@ -61,5 +61,6 @@ genetic_info:
 participants:
   selectors:
     - path == "/participants.json"
+    - '"age" in columns'
   fields:
     AgeReference: recommended
