@@ -295,9 +295,9 @@ index:
   description: |
     The label integer index.
   type: integer
-life_cycle_stage:
-  name: life cycle stage
-  display_name: life cycle stage
+age_category:
+  name: age category
+  display_name: age category
   description: |
     A non-numeric term for a subject's life cycle stage (for instance, 'adult').
     Inspired by the
