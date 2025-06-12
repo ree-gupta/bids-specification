@@ -60,7 +60,7 @@ birthdate:
   name: birthdate
   display_name: birthdate
   description: |
-    Date of the start of a subject's neonate stage. Date format (YYYY:MM:DD).
+    Date of the start of a subject's neonate stage. Date format (YYYY-MM-DD).
     Should not be provided or anonymized for human subjects.
   type: string
   format: date
