@@ -56,7 +56,6 @@ age_reference:
     - $ref: objects.enums.fertilization.value
     - $ref: objects.enums.gestation.value
     - $ref: objects.enums.birth.value
-    - $ref: objects.enums.death.value
 birthdate:
   name: birthdate
   display_name: birthdate
