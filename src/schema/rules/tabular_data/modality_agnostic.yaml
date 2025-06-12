@@ -11,7 +11,6 @@ Participants:
         There MUST be exactly one row for each participant.
     species: recommended
     age: recommended
-    age_reference: optional
     sex: recommended
     handedness: recommended
     strain: recommended
