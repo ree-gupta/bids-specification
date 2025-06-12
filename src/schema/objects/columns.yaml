@@ -63,7 +63,15 @@ birthdate:
     Date of the start of a subject's neonate stage. Datetime format.
     Should not be provided or anonymized for human subjects.
   type: string
-  format: datetime
+  format: date
+birthtime:
+  name: birthtime
+  display_name: birthtime
+  description: |
+    Time of the start of a subject's neonate stage. Time format (hh:mm:ssZ)
+    Should not be provided or anonymized for human subjects.
+  type: string
+  format: time
 cardiac:
   name: cardiac
   display_name: Cardiac measurement
