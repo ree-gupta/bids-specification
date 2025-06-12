@@ -53,14 +53,15 @@ age_reference:
     as reference for the numeric age information (for instance, 'start of embryo stage').
   type: string
   enum:
-    - $ref: objects.enums.start_of_embryo_stage.value
-    - $ref: objects.enums.start_of_gestational_stage.value
-    - $ref: objects.enums.start_of_neonate_stage.value
+    - $ref: objects.enums.fertilization.value
+    - $ref: objects.enums.gestation.value
+    - $ref: objects.enums.birth.value
+    - $ref: objects.enums.death.value
 birthdate:
   name: birthdate
   display_name: birthdate
   description: |
-    Date of the start of a subject's neonate stage. Datetime format.
+    Date of the start of a subject's neonate stage. Date format (YYYY:MM:DD).
     Should not be provided or anonymized for human subjects.
   type: string
   format: date
@@ -116,6 +117,22 @@ component:
     - $ref: objects.enums.quat_y.value
     - $ref: objects.enums.quat_z.value
     - $ref: objects.enums.quat_w.value
+deathdate:
+  name: deathdate
+  display_name: deathdate
+  description: |
+    Date of the end of a subject's life cycle. Date format (YYYY:MM:DD).
+    Should not be provided or anonymized for human subjects.
+  type: string
+  format: date
+deathtime:
+  name: deathtime
+  display_name: deathtime
+  description: |
+    Time of the end of a subject's life cycle. Time format (hh:mm:ssZ)
+    Should not be provided or anonymized for human subjects.
+  type: string
+  format: time
 detector__channels:
   name: detector
   display_name: Detector Name
@@ -290,7 +307,6 @@ life_cycle_stage:
   enum:
     - $ref: objects.enums.adolescent.value
     - $ref: objects.enums.adult.value
-    - $ref: objects.enums.death.value
     - $ref: objects.enums.embryo.value
     - $ref: objects.enums.infant.value
     - $ref: objects.enums.juvenile.value
