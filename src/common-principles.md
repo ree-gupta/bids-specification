@@ -461,9 +461,10 @@ Where possible, DICOM Tags are adopted directly as BIDS metadata terms and
 indicated with "**Corresponds to** DICOM Tag ID1, ID2 `DICOM Tag Name`.".
 When harmonization has been deemed necessary, this is indicated in the
 BIDS term description with "**Based on** DICOM Tag ID1, ID2 `DICOM Tag Name`.".
-Extraction of BIDS compatible metadata can be performed using [dcm2niix](https://github.com/rordenlab/dcm2niix)
-and [dicm2nii](https://www.mathworks.com/matlabcentral/fileexchange/42997-xiangruili-dicm2nii)
-DICOM to NIfTI converters. The [BIDS-validator](https://github.com/bids-standard/bids-validator)
+Extraction of BIDS compatible metadata can be performed using
+[DICOM to NIfTI converters](https://bids.neuroimaging.io/tools/converters.html)
+such as [dcm2niix](https://github.com/rordenlab/dcm2niix).
+The [BIDS-validator](https://github.com/bids-standard/bids-validator)
 will check for conflicts between the JSON file and the data recorded in the
 NIfTI header.
 
@@ -691,7 +692,10 @@ to which the metadata contained within are not applicable.
 The Inheritance Principle defines a systematized set of rules
 to determine which metadata files to associate with which data files.
 Further, because multiple metadata files may apply to an individual data file,
-the Principle defines the *order of precedence* of such metadata files contents.
+the Principle defines the *order of precedence* of such metadata content;
+this is necessary for resolution of conflicts if the same metadata field
+contains different values in different metadata files
+(though it is RECOMMENDED to avoid such overloading).
 
 ### Rules
 
@@ -1026,16 +1030,15 @@ For additional rules, see below:
 Describing dates and timestamps:
 
 -   Date time information MUST be expressed in the following format
-    `YYYY-MM-DDThh:mm:ss[.000000][Z]` (year, month, day, hour (24h), minute,
-    second, optional fractional seconds, and optional UTC time indicator).
+    `YYYY-MM-DDThh:mm:ss[.000000][Z|+hh:mm|-hh:mm]` (year, month, day, hour (24h),
+    minute, second, optional fractional seconds, and optional time offset).
     This is almost equivalent to the [RFC3339](https://tools.ietf.org/html/rfc3339)
-    "date-time" format, with the exception that UTC indicator `Z` is optional and
-    non-zero UTC offsets are not indicated.
-    If `Z` is not indicated, time zone is always assumed to be the local time of the
-    dataset viewer.
+    "date-time" format, with the exception that UTC offsets are OPTIONAL.
+    If no time offset is indicated,
+    time zone is always assumed to be the local time of the dataset viewer.
     No specific precision is required for fractional seconds, but the precision
     SHOULD be consistent across the dataset.
-    For example `2009-06-15T13:45:30`.
+    For example `2009-06-15T13:45:30+01:00`.
 
 -   Time stamp information MUST be expressed in the following format:
     `hh:mm:ss[.000000]`
