@@ -49,8 +49,7 @@ age_reference:
   name: age reference
   display_name: age reference
   description: |
-    Non-numeric term of a temporal boundary in a subject's life cycle that serves
-    as reference for the numeric age information (for instance, 'birth').
+    The reference for the numeric age. If not provided, 'birth' is assumed to be the default reference.
   type: string
   enum:
     - $ref: objects.enums.fertilization.value
