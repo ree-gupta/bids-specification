@@ -45,16 +45,6 @@ age:
     "Description": "Subject age in postnatal years",
     "Units": "year",
   }
-age_reference:
-  name: age reference
-  display_name: age reference
-  description: |
-    The reference for the numeric age. If not provided, 'birth' is assumed to be the default reference.
-  type: string
-  enum:
-    - $ref: objects.enums.fertilization.value
-    - $ref: objects.enums.gestation.value
-    - $ref: objects.enums.birth.value
 birthdate:
   name: birthdate
   display_name: birthdate
