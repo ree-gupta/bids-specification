@@ -127,7 +127,8 @@ deathtime:
   name: deathtime
   display_name: deathtime
   description: |
-    Time of the end of a subject's life cycle. Time format (hh:mm:ssZ)
+    Time of death. Time format (hh:mm:ssZ). Typically, this field will be 
+    combined with deathdate.
     Should not be provided or anonymized for human subjects.
   type: string
   format: time
