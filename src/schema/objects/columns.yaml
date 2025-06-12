@@ -119,7 +119,7 @@ deathdate:
   name: deathdate
   display_name: deathdate
   description: |
-    Date of the end of a subject's life cycle. Date format (YYYY:MM:DD).
+    Date of the end of a subject's life cycle. Date format (YYYY-MM-DD).
     Should not be provided or anonymized for human subjects.
   type: string
   format: date
