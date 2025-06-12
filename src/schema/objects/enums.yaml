@@ -1436,25 +1436,30 @@ microvascular:
   display_name: microvascular
   description: |
     The origin of a tissue: microvascular
-start_of_embryo_stage:
-  value: start of embryo stage
-  display_name: start of embryo stage
+birth:
+  value: birth
+  display_name: birth
   description: |
-    Point of fertilization marking the beginning of the subject's embryo
-    stage.
-start_of_gestational_stage:
-  value: start of gestational stage
-  display_name: start of gestational stage
+    A life cycle temporal boundary that is defined as the emergence of a 
+    neonate from the body of its mother. Assumed to be the default age 
+    reference if not otherwise specified.
+    It marks the beginning of a subject's neonatal stage 
+    ([UBERON_0035946](http://purl.obolibrary.org/obo/UBERON_0035946)). 
+fertilization:
+  value: fertilization
+  display_name: fertilization
   description: |
-    Point of gestation defined as the first day of the mother's last menstrual period.
-    Marks the beginning of the subject's gestational stage. Used as reference when
+    A life cycle temporal boundary that is defined as the union of gametes of 
+    opposite sexes during the process of sexual reproduction to form a zygote 
+    ([GO_0009566](http://purl.obolibrary.org/obo/GO_0009566)). 
+    It marks the beginning of the subject's embryonic stage.
+gestation:
+  value: gestation
+  display_name: gestation
+  description: |
+    First day of the mother's last menstrual period. Used as reference when
     time point of fertilization is unknown.
-start_of_neonate_stage:
-  value: start of neonatal stage
-  display_name: start of neonatal stage
-  description: |
-    Point of birth marking the beginning of a subject's neonatal stage. Often assumed
-    as default age reference if not otherwise specified.
+    It marks the beginning of the subject's gestational stage. 
 adolescent:
   value: adolescent
   display_name: adolescent
@@ -1473,12 +1478,6 @@ embryo:
   description: |
     Life cycle stage of a subject that starts with fertilization and ends with the
     fully formed embryo. Adapted from UBERON - http://purl.obolibrary.org/obo/UBERON_0000068.
-death:
-  value: death
-  display_name: death
-  description: |
-    Life cycle stage of a subject that starts with death and ends with full
-    decomposition of the subject's body. Adapted from UBERON - http://purl.obolibrary.org/obo/UBERON_0000071.
 infant:
   value: infant
   display_name: infant
