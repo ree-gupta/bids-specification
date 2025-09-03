@@ -42,8 +42,9 @@ age:
     for privacy purposes.
   definition: {
     "LongName": "Subject age",
-    "Description": "Subject age in postnatal years",
-    "Units": "year",
+    "Description": "Subject age in postnatal years.",
+    "Reference": "birth",
+    "Units": "year"
   }
 birthdate:
   name: birthdate
@@ -57,7 +58,8 @@ birthtime:
   name: birthtime
   display_name: birthtime
   description: |
-    Time of birth. Time format (hh:mm:ssZ). Typically, this field will be combined with birthdate.
+    Time (or estimated time) of birth. Time format (hh:mm:ssZ). 
+    Typically, this field will be combined with birthdate.
     Should not be provided or anonymized for human subjects.
   type: string
   format: time
@@ -117,8 +119,8 @@ deathtime:
   name: deathtime
   display_name: deathtime
   description: |
-    Time of death. Time format (hh:mm:ssZ). Typically, this field will be
-    combined with deathdate.
+    Time (or estimated time) of death. Time format (hh:mm:ssZ). 
+    Typically, this field will be combined with deathdate.
     Should not be provided or anonymized for human subjects.
   type: string
   format: time
