@@ -1436,6 +1436,30 @@ microvascular:
   display_name: microvascular
   description: |
     The origin of a tissue: microvascular
+birth:
+  value: birth
+  display_name: birth
+  description: |
+    A life cycle temporal boundary that is defined as the emergence of a
+    neonate from the body of its mother. Assumed to be the default age
+    reference if not otherwise specified.
+    It marks the beginning of a subject's neonatal stage
+    ([UBERON_0035946](http://purl.obolibrary.org/obo/UBERON_0035946)).
+fertilization:
+  value: fertilization
+  display_name: fertilization
+  description: |
+    A life cycle temporal boundary that is defined as the union of gametes of
+    opposite sexes during the process of sexual reproduction to form a zygote
+    ([GO_0009566](http://purl.obolibrary.org/obo/GO_0009566)).
+    It marks the beginning of the subject's embryonic stage.
+LMP_startdate:
+  value: gestation
+  display_name: gestation
+  description: |
+    First day of the mother's last menstrual period (LMP). Used as reference when
+    time point of fertilization is unknown.
+    It marks the beginning of the subject's gestational stage.
 adolescent:
   value: adolescent
   display_name: adolescent
@@ -1453,7 +1477,8 @@ embryo:
   display_name: embryo
   description: |
     Life cycle stage of a subject that starts with fertilization and ends with the
-    fully formed embryo. Adapted from UBERON - http://purl.obolibrary.org/obo/UBERON_0000068.
+    fully formed embryo. If fertilization is unknown the LMP startdate is assumed. 
+    Adapted from UBERON - http://purl.obolibrary.org/obo/UBERON_0000068.
 infant:
   value: infant
   display_name: infant
