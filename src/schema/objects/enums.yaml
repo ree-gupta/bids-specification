@@ -1483,7 +1483,7 @@ embryo:
   display_name: embryo
   description: |
     Life cycle stage of a subject that starts with fertilization and ends with the
-    fully formed embryo. If fertilization is unknown the LMP startdate is assumed. 
+    fully formed embryo. If fertilization is unknown the LMP startdate is assumed.
     Adapted from UBERON - http://purl.obolibrary.org/obo/UBERON_0000068.
 infant:
   value: infant
