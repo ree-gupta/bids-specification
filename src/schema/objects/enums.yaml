@@ -1470,7 +1470,7 @@ fertilization:
     ([GO_0009566](http://purl.obolibrary.org/obo/GO_0009566)).
     It marks the beginning of the subject's embryonic stage.
 LMP_startdate:
-  value: LMP_startdate
+  value: LMP start date
   display_name: LMP start date
   description: |
     A life cycle temporal boundary that is defined as the first day of the mother's

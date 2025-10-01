@@ -50,7 +50,7 @@ age:
   }
 birthdate:
   name: birthdate
-  display_name: birthdate
+  display_name: Birth date
   description: |
     Date of the start of a subject's neonate stage. Date format (YYYY-MM-DD).
     Should not be provided or anonymized for human subjects.
@@ -58,7 +58,7 @@ birthdate:
   format: date
 birthtime:
   name: birthtime
-  display_name: birthtime
+  display_name: Birth time
   description: |
     Time (or estimated time) of birth. Time format (hh:mm:ssZ).
     Typically, this field will be combined with birthdate.
@@ -112,7 +112,7 @@ component:
     - $ref: objects.enums.quat_w.value
 deathdate:
   name: deathdate
-  display_name: deathdate
+  display_name: Death date
   description: |
     Date of the end of a subject's life cycle. Date format (YYYY-MM-DD).
     Should not be provided or anonymized for human subjects.
@@ -120,7 +120,7 @@ deathdate:
   format: date
 deathtime:
   name: deathtime
-  display_name: deathtime
+  display_name: Death time
   description: |
     Time (or estimated time) of death. Time format (hh:mm:ssZ).
     Typically, this field will be combined with deathdate.
@@ -289,8 +289,8 @@ index:
     The label integer index.
   type: integer
 age_category:
-  name: age category
-  display_name: age category
+  name: age_category
+  display_name: Age category
   description: |
     A non-numeric term for a subject's life cycle stage (for instance, 'adult').
     Inspired by the
