@@ -57,7 +57,7 @@ AgeReference:
   type: string
   enum:
     - $ref: objects.enums.fertilization.value
-    - $ref: objects.enums.gestation.value
+    - $ref: objects.enums.LMP_startdate.value
     - $ref: objects.enums.birth.value
 Anaesthesia:
   name: Anaesthesia
