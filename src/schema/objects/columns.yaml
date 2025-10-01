@@ -43,7 +43,7 @@ age:
   definition: {
     "LongName": "Subject age",
     "Description": "Subject age in postnatal years.",
-    "Reference": "birth",
+    "AgeReference": "birth",
     "Format": "number",
     "Units": "year",
     "Maximum": 89,
