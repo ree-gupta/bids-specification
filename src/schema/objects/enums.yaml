@@ -1470,10 +1470,11 @@ fertilization:
     ([GO_0009566](http://purl.obolibrary.org/obo/GO_0009566)).
     It marks the beginning of the subject's embryonic stage.
 LMP_startdate:
-  value: gestation
-  display_name: gestation
+  value: LMP_startdate
+  display_name: LMP start date
   description: |
-    First day of the mother's last menstrual period (LMP). Used as reference when
+    A life cycle temporal boundary that is defined as the first day of the mother's
+    last menstrual period (LMP). Used as reference when
     time point of fertilization is unknown.
     It marks the beginning of the subject's gestational stage.
 adolescent:
